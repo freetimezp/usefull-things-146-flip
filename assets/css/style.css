@@ -10,8 +10,12 @@ a {
     text-decoration: none;
 }
 
-html, body {
+html,
+body {
     width: 100vw;
+    background: url(../images/bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     overflow-x: hidden;
 }
 
@@ -37,7 +41,8 @@ nav {
 }
 
 a {
-    color: #000;
+    color: #fff;
+    font-size: 20px;
 }
 
 footer {
@@ -57,7 +62,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: -1;
+    z-index: 1;
 }
 
 h1 {
@@ -69,23 +74,32 @@ h1 {
 }
 
 p {
-    font-size: 1.5vw; 
-    color: #000;
-    opacity: 0.35;
+    font-size: 1.5vw;
+    color: #fff;
+    opacity: 0.5;
 }
 
 .btn {
     position: absolute;
+    width: 210px;
+    height: fit-content;
+    text-align: center;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #0084ff;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 30px;
     padding: 1em 2em;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.img-gallery {
+    position: relative;
+    z-index: 3;
 }
 
 .img-gallery-container {
@@ -102,15 +116,16 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0.8;
 }
 
-.img:nth-child(1), 
-.img:nth-child(3)  {
+.img:nth-child(1),
+.img:nth-child(3) {
     left: 75%;
 }
 
-.img:nth-child(2), 
-.img:nth-child(4)  {
+.img:nth-child(2),
+.img:nth-child(4) {
     left: 25%;
 }
 
@@ -121,6 +136,7 @@ p {
     transform: translate(-50%, -50%);
     width: 250px;
     height: 325px;
+    opacity: 1;
 }
 
 .img.reorder:nth-child(1) {
@@ -135,16 +151,3 @@ p {
 .img.reorder:nth-child(4) {
     transform: translate(-50%, -50%) rotate(-2deg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
